@@ -106,11 +106,16 @@ fun ej3(){
     println("Introduza segundos")
     var segundoInput = readln()
 
+    /* No sé como hacer que no te pida itroducir algo obligatoriamente
+    when{
+        horaInput.isEmpty() -> 0
+        horaInput.isEmpty() -> 0
+        horaInput.isEmpty() -> 0
+    }*/
     var a = Tiempo(horaInput.toInt(), minutoInput.toInt(), segundoInput.toInt())
     println(a.toString())
 }
 fun main() {
-
     println("--------------------")
     println("--- Ejercicio 1. ---")
     println("--- Ejercicio 2. ---")

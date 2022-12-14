@@ -12,9 +12,9 @@ class Rectangulo(var base: Int, var altura: Int) {
     }
 }
 /*
-* Crear una clase Rectángulo, con atributos base y altura. La clase debe disponer del constructor y los métodos para calcular el área y el perímetro.
-* Opcionalmente, se puede crear el método toString para mostrar información sobre el rectángulo.
-* En el programa principal, crear varios rectángulos y mostrar por pantalla sus áreas y perímetros.
+* Crear una clase Rectángulo, con atributos base y altura. La clase debe disponer del constructor y los métodos para
+* calcular el área y el perímetro. Opcionalmente, se puede crear el método toString para mostrar información sobre el
+* rectángulo. En el programa principal, crear varios rectángulos y mostrar por pantalla sus áreas y perímetros.
 */
 fun ej1() {
     print("Introduce base: ")
@@ -26,9 +26,10 @@ fun ej1() {
     println(a.perimetro())
 }
 /*
-* Crear una clase Coche, a través de la cual se pueda conocer el color del coche, la marca, el modelo, el número de caballos, el número de puertas y la matrícula.
-* Crear el constructor del coche, así como los métodos estándar: ¿getters, setters? y toString.
-* En el programa principal, instancia varios coches, muestra su información, cambia el color a algunos de ellos y vuelve a mostrarlos por pantalla.
+* Crear una clase Coche, a través de la cual se pueda conocer el color del coche, la marca, el modelo, el número de
+* caballos, el número de puertas y la matrícula. Crear el constructor del coche, así como los métodos estándar:
+* ¿getters, setters? y toString. En el programa principal, instancia varios coches, muestra su información, cambia el
+* color a algunos de ellos y vuelve a mostrarlos por pantalla.
 */
 class Coche(
     var color: String,

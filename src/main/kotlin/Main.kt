@@ -10,6 +10,10 @@ class Rectangulo(var base: Int, var altura: Int) {
     fun perimetro(): Int {
         return base + base + altura + altura
     }
+
+    override fun toString(): String {
+        return "Para la base: $base, y la altura: $altura, su area es: ${area()} y su perimetro es: ${perimetro()}"
+    }
 }
 /*
 * Crear una clase Rectángulo, con atributos base y altura. La clase debe disponer del constructor y los métodos para
@@ -21,9 +25,9 @@ fun ej1() {
     val baseInput = readln()
     print("Introduce altura: ")
     val alturaInput = readln()
-    val a = Rectangulo(baseInput.toInt(), alturaInput.toInt())
-    println(a.area())
-    println(a.perimetro())
+    val rectangulo = Rectangulo(baseInput.toInt(), alturaInput.toInt())
+    println(rectangulo.toString())
+    main()
 }
 /*
 * Crear una clase Coche, a través de la cual se pueda conocer el color del coche, la marca, el modelo, el número de
@@ -39,6 +43,7 @@ class Coche(
     var numeroPuerta: Int,
     var matricula: String
 ) {
+    /* fun toString en class coche sirve para que cuando se imprima siempre se haga de la forma que le hemos dejado dicho */
     override fun toString(): String {
         return "color $color, marca $marca, modelo $modelo, numero de caballos $numeroCaballo, numero de puertas $numeroPuerta, matrícula $matricula"
     }
@@ -56,7 +61,7 @@ fun ej2() {
     val numeroPuertaInput = readln()
     println("Introduce el matrícula")
     val matriculaInput = readln()
-    val a = Coche(
+    val coche = Coche(
         colorInput,
         marcaInput,
         modeloInput,
@@ -64,7 +69,8 @@ fun ej2() {
         numeroPuertaInput.toInt(),
         matriculaInput
     )
-    println(a.toString())
+    println(coche.toString())
+    main()
 }
 /*
 * Crear una clase Tiempo, con atributos hora, minuto y segundo, que pueda ser construida indicando los tres atributos,
@@ -91,22 +97,26 @@ fun ej3() {
         horaInput.isEmpty() -> 0
         horaInput.isEmpty() -> 0
     }*/
-    val a = Tiempo(horaInput.toInt(), minutoInput.toInt(), segundoInput.toInt())
-    println(a.toString())
+    val tiempo = Tiempo(horaInput.toInt(), minutoInput.toInt(), segundoInput.toInt())
+    println(tiempo.toString())
+    main()
+}
+fun salir(){
+    return println("Saliendo...")
 }
 fun main() {
     println("--------------------")
-    println("--- Ejercicio 1. ---")
-    println("--- Ejercicio 2. ---")
-    println("--- Ejercicio 3. ---")
-    println("--- Ejercicio 4. ---")
-    println("--- Ejercicio 5. ---")
+    println("--- 1: Ejercicio 1. ---")
+    println("--- 2: Ejercicio 2. ---")
+    println("--- 3: Ejercicio 3. ---")
+    println("--- 4: Salir ---")
     println("--------------------")
-    print("Elige actividad con un número del 1-5\n> ")
+    print("Elige actividad con un número del 1-3, 4 para salir\n> ")
     val actividad = readln()
     when (actividad.toInt()) {
         1 -> ej1()
         2 -> ej2()
         3 -> ej3()
+        4 -> salir()
     }
 }
